@@ -1,0 +1,71 @@
+<html>
+    <meta charset="UTF-8">
+    <h1>05-01 Práctica cálculo de masa corporal</h1> <!05-01 Práctica cálculo de masa corporal con input>
+    <h3>----------------------------------------------------------------</h3>
+    <br>
+    <br>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");         
+            }  
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        function calcularimc(peso,altura){
+
+            return (peso / (altura*altura));
+        }
+
+        nombre = prompt("Cuál es tu nombre?")
+        entradapeso = prompt(nombre + " cuál es tu peso? (en kilos)");
+        entradaaltura = prompt("Cuál es tu altura? (en metros)");
+
+        
+        imprimir("Nombre: " + nombre);
+        imprimir("Peso: " + entradapeso);
+        imprimir("Estatura: " + entradaaltura);
+
+
+        resutadoimc = calcularimc(entradapeso,entradaaltura);
+        imprimir("<hEl IMC calculado de -" + nombre + "- es: " + resutadoimc);
+
+
+        if(resutadoimc<18.5){
+            imprimir("<h3>El IMC de -" + nombre + "- es menor de lo recomendado</h3>");
+        }
+
+
+        if(resutadoimc>18.5){
+            if(resutadoimc<25){
+            imprimir("<h3>El IMC de -" + nombre + "- es normal</h3>");
+            }
+        }
+
+        if(resutadoimc>=25){
+            if(resutadoimc<30){
+            imprimir("<h3>El IMC de -" + nombre + "- es de sobrepeso</h3>");
+            }
+        }
+
+         if(resutadoimc>=30){
+            imprimir("<h3>El IMC de -" + nombre + "- está en el rango de obesidad</h3>");
+        }
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h4>Práctica por Raúl Trueba Mejía - G4 2022 CDMX</h4>
+        <a href="https://www.linkedin.com/in/deepfx/"><img src="linkedin.png" alt="Contacto Raúl Trueba"></a>
+        <a><img src="one.png" alt="Contacto Raúl Trueba" width="36" height="36"></a>
+        <a><img src="logoalura.svg" alt="Contacto Raúl Trueba" width="32" height="32"></a>       
+    </div>
+</html>
